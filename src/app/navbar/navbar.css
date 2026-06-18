@@ -1,0 +1,39 @@
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.nav-links{
+    display: flex;
+    gap: 3rem;
+    list-style-type: space-counter;
+    background:#1f1f1f;
+    padding: 20px 40px;
+    border-radius: 99px;
+}
+
+.nav-links li{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-links li:hover{
+    color:#dfff32;
+}
+
+.contact-btn{
+    background:#c8ccb1;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-weight:600;
+}

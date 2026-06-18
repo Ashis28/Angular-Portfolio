@@ -1,0 +1,36 @@
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    border-top:
+    1px solid rgba(255,255,255,.08);
+    background: 
+    linear-gradient(90deg,rgb(243, 64, 64),rgb(197, 110, 110),0.20);
+}
+
+p{
+    font-size: 1.2rem;
+    font-width: 600;
+    width: 500px;
+    margin-bottom: .8rem;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:1.5rem;
+    margin:2rem 0;
+}
+
+.social-links a:hover{
+    transform:
+    translateY(-5px);
+    border-color:#a855f7;
+    box-shadow:
+    0 0 20px
+    rgba(168,85,247,.3);
+}

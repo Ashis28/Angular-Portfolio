@@ -1,0 +1,24 @@
+<section class="contact">
+    <h2>Contact</h2>
+    <div class="contact-form">
+        <div class="field">
+            <label>Name</label>
+            <input type="name" placeholder="Enter your name" [formField]="contactForm.name">
+             @if(contactForm.name().touched() && contactForm.name().invalid()){
+                <span class="error">{{contactForm.name().errorSummary()[0].message}};</span>
+            }
+        </div>
+        <div class="field">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" [formField]="contactForm.email">
+            @if(contactForm.email().touched() && contactForm.email().invalid()){
+                <span class="error">{{contactForm.email().errors()[0].message}};</span>
+            }
+        </div>
+        <div class="field">
+            <label>Message</label>
+           <textarea rows="5" [formField]="contactForm.message"></textarea>
+        </div>
+        <button [disabled]="contactForm().invalid()" (click)="submitForm()">Send Message</button>
+    </div>
+</section>
