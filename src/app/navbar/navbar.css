@@ -1,39 +1,80 @@
-
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 14px 24px;
+    background: #faf9f9;
+    border-radius: 24px;
+    margin: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
-.nav-links{
+.contact-links{
     display: flex;
-    gap: 3rem;
-    list-style-type: space-counter;
-    background:#1f1f1f;
-    padding: 20px 40px;
-    border-radius: 99px;
+    align-items: center;
+    gap: 0.5rem;
+}
+.contact-pill{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 1px solid #ececf1;
+    border-radius: 999px;
+    font-size: 15px;
+    color: #4b5563;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
-.nav-links li{
+.contact-pill:hover{
+    background: #dce1ed;
+    color: #71a8f5;
+    transform: translateY(-3px);
+}
+
+.contact-pill .icon{
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.nav-right{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.experience-link{
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e2a4a;
     cursor: pointer;
-    transition: 0.3s;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
-.nav-links li:hover{
-    color:#dfff32;
+.experience-link:hover{
+    color: #2f5fad;
+}
+.theme-toggle{
+    height: 34px;
+    width: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #ececf1;
+    background: #ffffff;
+    cursor: pointer;
 }
 
-.contact-btn{
-    background:#c8ccb1;
+.theme-toggle .icon{
+    width: 16px;
+    height: 16px;
+    color: #4b5563;
+    transition: transform 0.3s ease
+}
 
-    border:none;
-
-    padding:15px 30px;
-
-    border-radius:999px;
-
-    cursor:pointer;
-
-    font-weight:600;
+.theme-toggle:hover .icon{
+    transform: scale(1.2);
 }
