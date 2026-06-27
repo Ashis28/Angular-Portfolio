@@ -1,113 +1,100 @@
-<section class="work-container">
-    <h2>Projects</h2>
-    <div class="project-container">
-        <div class="project">
+<section class="projects-section">
+  <div class="projects-container">
+
+    <header class="projects-header">
+      <span class="projects-label">Work</span>
+      <h2 class="projects-title">Featured Projects</h2>
+    </header>
+    <div class="projects-grid">
+        @for (project of projects; track $index; let pi=$index) {
+            <article class="project-card" 
+            (mouseover)="setPaused(pi,true)"
+            (mouseleave)="setPaused(pi,false)">
             
-            <div class="project-content">
-                <h3>pharmacy Management System</h3>
-                <div class="tech-stack">
-                    <span class="language">Angular</span>
-                    <span class="language">Java</span>
-                    <span class="language">Docker</span>
-                    <span class="language">SpringBoot</span>
-                </div>
-
-                <a class="gitLink">Github</a>
-
-                <p>
-                A full-stack pharmacy management platform
-                featuring medicine inventory management,
-                authentication, dashboard analytics,
-                pagination and role-based access control.
-                </p>
-                <div class="project-actions">
-                    <a href="#">GitHub</a>
-                    <a href="#">GitHub</a>
-                </div>
-
-            </div>
-            <div class="project-image">
-                <img src="https://images.pexels.com/photos/270488/pexels-photo-270488.jpeg" alt="img1" width="200" height="300">
-            </div>
-            
-        </div>
-        <div class="project">
-            <div class="project-image">
-                <img src="https://images.pexels.com/photos/270488/pexels-photo-270488.jpeg" alt="img1" width="200" height="300">
+            <div class="chrome-design">
+                <span class="red-dot"></span>
+                <span class="green-dot"></span>
+                <span class="blue-dot"></span>
             </div>
 
-            <div class="project-content">
-                <h3>pharmacy Management System</h3>
-                <div class="tech-stack">
-                    <span class="language">Angular</span>
-                    <span class="language">Java</span>
-                    <span class="language">Docker</span>
-                    <span class="language">SpringBoot</span>
+            <div
+                class="carousel"
+                (touchstart)="onTouchStart($event, pi)"
+                (touchend)="onTouchEnd($event, pi)"
+                [attr.data-project]="pi">
+
+                <div class="carousel-track">
+                    @for (img of project.images; track img; let si=$index) {
+                        <div class="carousel-slide" [class.active] = "si===activeSlides[pi]">
+                            <img
+                            [src]="img"
+                            [alt]="project.title + ' screenshot ' + (si + 1)"
+                            class="slide-image"
+                            />
+                        </div>
+                    }
                 </div>
+                <!-- Prev arrow -->
+                <button
+                    class="carousel-arrow arrow-prev"
+                    type="button"
+                    (click)="prev(pi)"
+                    aria-label="Previous slide"
+                    >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
 
-                <a class="gitLink">Github</a>
+                <!-- Next arrow -->
+                <button
+                    class="carousel-arrow arrow-next"
+                    type="button"
+                    (click)="next(pi)"
+                    aria-label="Next slide"
+                    >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
 
-                <p>
-                A full-stack pharmacy management platform
-                featuring medicine inventory management,
-                authentication, dashboard analytics,
-                pagination and role-based access control.
-                </p>
-                <div class="project-actions">
-                    <a href="#">GitHub</a>
-                    <a href="#">GitHub</a>
+                <!-- Dots -->
+                <div class="carousel-dots" role="tablist">
+                    @for (img of project.images; track img; let si = $index) {
+                            <button
+                            class="carousel-dot"
+                            type="button"
+                            [class.active]="si === activeSlides[pi]"
+                            (click)="goTo(pi, si)"
+                            role="tab"
+                            [attr.aria-selected]="si === activeSlides[pi]"
+                            [attr.aria-label]="'Slide ' + (si + 1)"
+                            ></button>
+                    }
                 </div>
-
             </div>
-            
-        </div>
 
+                <div class="project-info">
+                    <span class="project-category">{{ project.category }}</span>
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-desc">{{ project.description }}</p>
+
+                    <ul class="project-tags" role="list">
+                    @for (tag of project.tags; track tag) {
+                        <li class="project-tag">{{ tag }}</li>
+                    }
+                    </ul>
+                    <a [href]="project.githubUrl"
+                    target="_blank"
+                    rel="noopener noreferer"
+                    class="github-link"
+                    >View On Github -></a>
+                </div>
+            </article>
+        }
 
     </div>
-</section>
-
-<section class="project-grid">
-
-    <div class="project-card">
-        <img src="https://tse2.mm.bing.net/th/id/OIP.FVclzmDyWK6ai7dUG4JB7gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="img" class="project-image">
-    
-        <p class="project-description">
-            Full stack pharmacy management platform with
-            inventory management, analytics dashboard and
-            authentication system.
-        </p>
-        <div class="project-actions">
-            <a href="#">GitHub</a>
-            <a href="#">LiveDemo</a>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <img src="https://tse2.mm.bing.net/th/id/OIP.FVclzmDyWK6ai7dUG4JB7gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="img" class="project-image">
-    
-        <p class="project-description">
-            Full stack pharmacy management platform with
-            inventory management, analytics dashboard and
-            authentication system.
-        </p>
-        <div class="project-actions">
-            <a href="#">GitHub</a>
-            <a href="#">LiveDemo</a>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <img src="https://tse2.mm.bing.net/th/id/OIP.FVclzmDyWK6ai7dUG4JB7gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="img" class="project-image">
-    
-        <p class="project-description">
-            Full stack pharmacy management platform with
-            inventory management, analytics dashboard and
-            authentication system.
-        </p>
-        <div class="project-actions">
-            <a href="#">GitHub</a>
-            <a href="#">LiveDemo</a>
-        </div>
-    </div>
-     
+  </div>
 </section>

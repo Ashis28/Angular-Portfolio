@@ -1,11 +1,14 @@
 .hero{
-    min-height:90vh;
+    min-height:70vh;
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:4rem;
-    padding:0 6rem;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 2rem 6rem 3rem;
 }
+
 .hero-content{
     max-width: 600px;
 }
@@ -13,18 +16,20 @@
     color:#8b8b8b;
     letter-spacing:2px;
     text-transform:uppercase;
+    margin-left: 5px;
 }
 .hero-content h1{
     font-size: 5rem;
     line-height: 1.1;
     margin: 1rem 0;
+    color: #1e2a4a;
 }
 .hero-content h1 span{
-    color:#7c3aed;
+    color:#aeceed;
 }
 .hero-content p{
     font-size: 1.2rem;
-    color:#a1a1aa;
+    color:#4f4f5e;
     line-height: 1.8;
     margin: 1rem 0;
 }

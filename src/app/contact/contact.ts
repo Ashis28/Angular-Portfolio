@@ -5,6 +5,7 @@ import { min } from 'rxjs';
 interface contact{
   name : string,
   email : string,
+  subject : string;
   message : string;
 }
 @Component({
@@ -17,13 +18,16 @@ export class Contact {
   contactModel = signal<contact>({
     name : "",
     email : "",
+    subject : "",
     message : ""
   })
-  contactForm = form(this.contactModel,(schemaPath) =>{
-    required(schemaPath.name, {message : "Name is required"});
-    required(schemaPath.email, {message : "email is required"});
-    email(schemaPath.email,{message:"Plz enter a valid email"});
-    minLength(schemaPath.name,3,{message : "Name Length must be greater then 3"});
+  contactForm = form(this.contactModel, (s) => {
+    required(s.name,    { message: 'Name is required' });
+    minLength(s.name, 3, { message: 'Name must be at least 3 characters' });
+    required(s.email,   { message: 'Email is required' });
+    email(s.email,      { message: 'Please enter a valid email' });
+    required(s.subject, { message: 'Subject is required' });
+    required(s.message, { message: 'Message is required' });
   });
 
   submitForm(){
@@ -31,6 +35,7 @@ export class Contact {
     this.contactForm().reset({
       name : "",
       email : "",
+      subject : "",
       message : ""
     });
     // console.log(this.contactForm.email().errors()[0].message);

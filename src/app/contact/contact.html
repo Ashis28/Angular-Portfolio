@@ -1,24 +1,68 @@
-<section class="contact">
-    <h2>Contact</h2>
-    <div class="contact-form">
-        <div class="field">
-            <label>Name</label>
-            <input type="name" placeholder="Enter your name" [formField]="contactForm.name">
-             @if(contactForm.name().touched() && contactForm.name().invalid()){
-                <span class="error">{{contactForm.name().errorSummary()[0].message}};</span>
-            }
+<section class="contact-section">
+    <div class="contact-card">
+        <div class="contact-heading">
+            <span class="contact-label">Get In Touch</span>
+             <h2 class="contact-title">Let's talk</h2>
+            <p class="contact-desc">Have a project or opportunity? Send me a message.</p>
         </div>
-        <div class="field">
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email" [formField]="contactForm.email">
-            @if(contactForm.email().touched() && contactForm.email().invalid()){
-                <span class="error">{{contactForm.email().errors()[0].message}};</span>
-            }
+
+        <div class="form-body">
+            <div class="form-row">
+                <div class="field">
+                    <label class="field-label" for="contact-name">Name</label>
+                    <input id="contact-name" type="text"
+                        placeholder="your name"
+                        class="field-input"
+                        [formField]="contactForm.name">
+                     @if(contactForm.name().touched() && contactForm.name().invalid()){
+                        <span class="field-error">{{contactForm.name().errorSummary()[0].message}};</span>
+                    }
+                </div>
+
+                <div class="field">
+                    <label class="field-label" for="contact-email">Email</label>
+                    <input id="contact-email" type="email"
+                        class="field-input"
+                        placeholder="your@email.com"
+                        [formField]="contactForm.email">
+                    @if(contactForm.email().touched() && contactForm.email().invalid()){
+                        <span class="field-error">{{contactForm.email().errors()[0].message}};</span>
+                    }
+                </div>
+                                
+            </div>
+
+                <div class="field">
+                    <label class="field-label" for="contact-subject">Subject</label>
+                    <input id="contact-subject" type="text"
+                        placeholder="What's about" class="field-input"
+                        [formField]="contactForm.subject">
+                    @if (contactForm.subject().touched() && contactForm.subject().invalid()) {
+                        <span class="field-error">{{ contactForm.subject().errors()[0].message}}</span>
+                    }
+                </div>
+                <div class="field">
+                    <label class="field-label" for="contact-message">Message</label>
+                    <textarea
+                        id="contact-message"
+                        class="field-input field-textarea"
+                        rows="6"
+                        placeholder="Tell me more..."
+                        [formField]="contactForm.message"
+                        ></textarea>
+                    @if (contactForm.message().touched() && contactForm.message().invalid()) {
+                    <span class="field-error">{{ contactForm.message().errors()[0].message }}</span>
+                    }
+                </div>
+            </div>
+            <div class="form-footer">
+                <button type="button"
+                    class="submit-btn"
+                    [disabled]="contactForm().invalid()"
+                    (click) = "submitForm()">
+                    Send Message ->
+                </button>
+                 <span class="submit-note">Goes directly to my inbox. No spam, ever.</span>
+            </div>
         </div>
-        <div class="field">
-            <label>Message</label>
-           <textarea rows="5" [formField]="contactForm.message"></textarea>
-        </div>
-        <button [disabled]="contactForm().invalid()" (click)="submitForm()">Send Message</button>
-    </div>
 </section>

@@ -10,7 +10,7 @@ import { Footer } from "./footer/footer";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Home, About, Experience, Work, Contact, Footer],
+  imports: [RouterOutlet, Navbar, Home, About, Work, Contact, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
