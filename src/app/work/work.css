@@ -1,11 +1,11 @@
 /* ─── Section ─────────────────────────────────────── */
 .projects-section {
-    padding: 5rem 6rem 7rem;
+    padding: 5rem 9rem 7rem;
     background: #f8f9fc;
 }
 
 .projects-container {
-    max-width: 1020px;
+    max-width: 1120px;
     margin: 0 auto;
 }
 
@@ -36,7 +36,6 @@
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
     align-items: start;
     gap: 5rem;
 }
