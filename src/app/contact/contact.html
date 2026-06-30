@@ -60,8 +60,20 @@
                     class="submit-btn"
                     [disabled]="contactForm().invalid()"
                     (click) = "submitForm()">
-                    Send Message ->
+                    @if (isSubmitting()) {
+                        <span class="spinner"></span>
+                        Sending...
+                    } @else {
+                        Send message →
+                    }
                 </button>
+                @if (submitStatus() === 'success') {
+                    <span class="status-success">Message sent I will get back to u soon </span>
+                    }
+
+                @if (submitStatus() === 'error') {
+                    <span class="status-error">Something went wrong. Please try again or email me directly.</span>
+                }
                  <span class="submit-note">Goes directly to my inbox. No spam, ever.</span>
             </div>
         </div>

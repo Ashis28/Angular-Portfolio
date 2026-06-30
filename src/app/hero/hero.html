@@ -1,0 +1,77 @@
+<section class="hero">
+    <div class="hero-content">
+        <span class="intro">Hi, I'm Ash</span>
+        <h1>
+            Building Digital
+            <span>Experiences</span>
+        </h1>
+        <p>
+            From prototypes to production-ready systems,
+            I turn ideas into scalable and user-focused products.
+        </p>
+        <div class="hero-actions">
+            <button class="cv-btn" (click)="downloadCv()">
+                Download CV
+            </button>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="ai-glow"></div>
+
+        <div class="ai-chat-card">
+            <div class="ai-chat-header">
+                <div class="ai-avatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke-linecap="round"/>
+                        <circle cx="12" cy="12" r="3.2"/>
+                    </svg>
+                </div>
+                <div class="ai-chat-heading">
+                    <span class="ai-chat-title">AI Assistant</span>
+                    <span class="ai-chat-status">
+                        <span class="status-dot"></span>
+                        Online now
+                    </span>
+                </div>
+            </div>
+
+            <div class="ai-chat-body">
+                <div class="message ai-message">
+                    <div class="message-avatar">AI</div>
+                    <div class="message-bubble">
+                        Hi there 👋 Ask me anything about my experience, stack or projects.
+                    </div>
+                </div>
+
+                <div class="message user-message">
+                    <div class="message-bubble">What technologies do you work with?</div>
+                </div>
+
+                <div class="message ai-message">
+                    <div class="message-avatar">AI</div>
+                    <div class="message-bubble typing-bubble">
+                        <span class="typing-dot"></span>
+                        <span class="typing-dot"></span>
+                        <span class="typing-dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-chat-suggestions">
+                <button type="button" class="suggestion-chip">Skills?</button>
+                <button type="button" class="suggestion-chip">Experience?</button>
+                <button type="button" class="suggestion-chip">Projects?</button>
+            </div>
+
+            <div class="ai-chat-input">
+                <input type="text" placeholder="Ask me anything..." />
+                <button type="button" class="ai-send-btn" aria-label="Send message">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2">
+                        <path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
