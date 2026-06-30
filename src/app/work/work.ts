@@ -21,7 +21,7 @@ export class Work implements OnInit ,OnDestroy{
       title: 'MedFlow',
       description: 'Distributed pharmacy management backend built on 8 independently deployable microservices with Netflix Eureka service discovery, JWT authentication, and live Grafana APM monitoring across 33+ REST APIs.',
       tags: ['Java 17', 'Spring Boot', 'Spring Cloud', 'MySQL', 'Docker'],
-      githubUrl: 'https://github.com/Ashis28',
+      githubUrl: 'https://github.com/Ashis28/Pharmacy-Online',
       images:[
         'assets/MedFlow/home.jpeg',
         'assets/MedFlow/login.jpeg',
@@ -34,7 +34,7 @@ export class Work implements OnInit ,OnDestroy{
       title: 'Malaria Cell Detector',
       description: 'CNN-based binary classifier trained on 27,000+ microscopy images. Deep architecture with Batch Normalisation and Dropout achieves high generalisation accuracy using TensorFlow and OpenCV.',
       tags: ['Python', 'TensorFlow', 'CNN', 'OpenCV', 'NumPy'],
-      githubUrl: 'https://github.com/Ashis28',
+      githubUrl: 'https://github.com/Ashis28/CNNProject',
       images:[
         'assets/Malaria/malaria1.png',
         'assets/Malaria/malaria2.png',
