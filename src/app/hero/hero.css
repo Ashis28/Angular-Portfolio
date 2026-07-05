@@ -1,3 +1,4 @@
+
 .hero{
     min-height:70vh;
     display:flex;
@@ -440,6 +441,17 @@
         font-size: 2.75rem;
     }
     .ai-chat-card{
+        width: 100%;
+        max-width: 380px;
+    }
+    /* added later  */
+    .hero-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ai-chat-card {
         width: 100%;
         max-width: 380px;
     }

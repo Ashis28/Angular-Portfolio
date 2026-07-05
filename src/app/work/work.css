@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+.title {
+  font-family: 'Playfair Display', serif;
+}
+
+.body {
+  font-family: 'Inter', sans-serif;
+}
 /* ─── Section ─────────────────────────────────────── */
 .projects-section {
     padding: 5rem 9rem 7rem;
@@ -190,28 +199,34 @@
     gap: 10px;
 }
 
-.project-category {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    color: #2f5fad;
-}
-
 .project-title {
-    font-size: 1.45rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: #1e2a4a;
     margin: 0;
-    line-height: 1.25;
+    line-height: 1.2;
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.3px;
 }
 
 .project-desc {
-    font-size: 14px;
+    font-size: 13.5px;
     color: #6b7280;
-    line-height: 1.7;
+    line-height: 1.75;
     margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
 }
+
+.project-category {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #2f5fad;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+
 
 /* ─── Tags ────────────────────────────────────────── */
 .project-tags {

@@ -79,3 +79,51 @@
 .theme-toggle:hover .icon{
     transform: scale(1.2);
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 14px;
+        margin: 10px;
+        border-radius: 18px;
+    }
+
+    /* Hide text labels, keep only the icon */
+    .contact-pill span {
+        display: none;
+    }
+
+    .contact-pill {
+        padding: 8px;
+        border-radius: 50%;
+        justify-content: center;
+    }
+
+    .contact-pill .icon {
+        width: 17px;
+        height: 17px;
+    }
+
+    .experience-link {
+        font-size: 13px;
+    }
+
+    .contact-links {
+        gap: 0.35rem;
+    }
+
+    .nav-right {
+        gap: 6px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar {
+        margin: 8px;
+        padding: 8px 10px;
+    }
+
+    /* Hide email on very small screens — too wide even as icon-only */
+    .contact-pill:first-child {
+        display: none;
+    }
+}
