@@ -23,7 +23,7 @@ export class Chat {
 
   private readonly http = inject(HttpClient);
 
-  private readonly apiUrl = 'http://localhost:8787/chat';
+  private readonly apiUrl = 'https://cloudfare1.ashiskumar-dash.workers.dev/chat';
 
   readonly messages = signal<ChatMessage[]>([
     {
