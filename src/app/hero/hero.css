@@ -125,10 +125,54 @@
     animation: status-ping 2s ease-out infinite;
 }
 
-.ai-chat-body{
+.ai-chat-body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-height: 220px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding-right: 2px;
+}
+
+.ai-chat-body::-webkit-scrollbar {
+    display: none;
+}
+
+/* ─── Markdown output inside bubbles ──────────────── */
+.markdown-body {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #374151;
+}
+
+.markdown-body p {
+    margin: 0 0 6px;
+}
+
+.markdown-body p:last-child {
+    margin-bottom: 0;
+}
+
+.markdown-body strong {
+    font-weight: 600;
+    color: #1e2a4a;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+    margin: 4px 0 6px;
+    padding-left: 16px;
+}
+
+.markdown-body li {
+    margin-bottom: 2px;
+}
+
+.markdown-body a {
+    color: #2f5fad;
+    text-decoration: underline;
+    word-break: break-all;
 }
 
 .message{
@@ -275,6 +319,89 @@
 }
 .tech-card:hover{
     transform: translateY(-2px);
+}
+
+/* ─── Scrollable message body ─────────────────────── */
+.ai-chat-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 220px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding-right: 2px;
+}
+
+.ai-chat-body::-webkit-scrollbar {
+    display: none;
+}
+
+/* ─── Markdown output inside bubbles ──────────────── */
+.markdown-body {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #374151;
+}
+
+.markdown-body p {
+    margin: 0 0 6px;
+}
+
+.markdown-body p:last-child {
+    margin-bottom: 0;
+}
+
+.markdown-body strong {
+    font-weight: 600;
+    color: #1e2a4a;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+    margin: 4px 0 6px;
+    padding-left: 16px;
+}
+
+.markdown-body li {
+    margin-bottom: 2px;
+}
+
+.markdown-body a {
+    color: #2f5fad;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+/* ─── Textarea (replaces static input) ────────────── */
+.chat-textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 13.5px;
+    color: #1e2a4a;
+    background: transparent;
+    resize: none;
+    font-family: inherit;
+    line-height: 1.5;
+    max-height: 80px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding: 4px 0;
+}
+
+.chat-textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* ─── Send button disabled state ──────────────────── */
+.ai-send-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
 }
 
 @keyframes card-rise{
